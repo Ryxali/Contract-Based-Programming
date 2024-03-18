@@ -10,7 +10,7 @@ public class SlideShow : MonoBehaviour
         slideSequence = new SlideSequence(transform);
     }
 
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         while (slideSequence.MoveNext())
         {
