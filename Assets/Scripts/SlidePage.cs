@@ -2,6 +2,8 @@
 
 public class SlidePage : MonoBehaviour, ISlideStep
 {
+    [SerializeField]
+    private bool lastOne = false;
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -21,6 +23,6 @@ public class SlidePage : MonoBehaviour, ISlideStep
 
     public bool MoveNext(ref PlayerInput input)
     {
-        return true;
+        return !lastOne;
     }
 }
